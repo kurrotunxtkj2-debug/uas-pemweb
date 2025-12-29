@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Materi Form JavaScript</title>
+    <script>
+        function tampilTanggal() {
+            document.getElementById("hasil").innerHTML = Date();
+        }
+    </script>
+</head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Form JavaScript</h2>
+
+<form>
+    Nama: <input type="text"><br><br>
+
+    Jenis Kelamin:<br>
+    <input type="radio" name="jk"> Laki-laki
+    <input type="radio" name="jk"> Perempuan<br><br>
+
+    Hobi:<br>
+    <input type="checkbox"> Membaca
+    <input type="checkbox"> Olahraga
+    <input type="checkbox"> Musik<br><br>
+
+    Jurusan:
+    <select>
+        <option>Teknik Informatika</option>
+        <option>Sistem Informasi</option>
+    </select><br><br>
+
+    <button type="button" onclick="tampilTanggal()">Tampilkan Tanggal</button>
+</form>
+
+<p id="hasil"></p>
+
+<br>
+<a href="index.html">⬅ Kembali ke Beranda</a>
+
+</body>
+</html>
