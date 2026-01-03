@@ -1,58 +1,106 @@
 const materiDatabase = {
-    p1: { t: "Pertemuan 1: Pengenalan Struktur Data", d: "Halo, saya Kurrotun. Di pertemuan awal ini kita mempelajari dasar organisasi data agar aplikasi lebih ringan dan cepat." },
-    p2: { t: "Pertemuan 2: Array (Larik)", d: "Mempelajari cara menyimpan data dalam deretan memori yang berurutan. Sangat efektif untuk data dengan jumlah tetap." },
-    p3: { t: "Pertemuan 3: Struct & ADT", d: "Membahas pembuatan tipe data kustom untuk menampung berbagai macam informasi dalam satu paket variabel." },
-    p4: { t: "Pertemuan 4: Single Linked List", d: "Memasuki konsep data dinamis di mana setiap data menyimpan alamat data berikutnya menggunakan pointer." },
-    p5: { t: "Pertemuan 5: Double Linked List", d: "Versi Linked List yang lebih canggih karena bisa melompat maju maupun mundur antar node." },
-    p6: { t: "Pertemuan 6: Stack (Tumpukan)", d: "Prinsip LIFO (Last In First Out). Terakhir masuk, pertama keluar. Digunakan pada fitur 'Kembali' di browser." },
-    p7: { t: "Pertemuan 7: Queue (Antrian)", d: "Prinsip FIFO (First In First Out). Pertama datang, pertama dilayani. Sangat berguna untuk sistem antrian bank." },
-    p8: { t: "Pertemuan 8: UTS", d: "Evaluasi tengah semester untuk mengukur sejauh mana pemahaman Kurrotun mengenai materi linear." },
-    p9: { t: "Pertemuan 9: Tree (Pohon)", d: "Struktur data hierarkis. Di sini kita belajar tentang akar, cabang, dan daun dalam sebuah data." },
-    p10: { t: "Pertemuan 10: Binary Search Tree", d: "Strategi pohon biner terurut untuk mempercepat proses pencarian data hingga ribuan kali lipat." },
-    p11: { t: "Pertemuan 11: Tree Traversal", d: "Cara menelusuri isi pohon data melalui jalur Pre-order, In-order, dan Post-order." },
-    p12: { t: "Pertemuan 12: Graph (Graf)", d: "Model jaringan yang menghubungkan titik-titik lokasi, seperti jalur peta atau jaringan pertemanan." },
-    p13: { t: "Pertemuan 13: Searching", d: "Teknik mencari data dengan cara Linear (urut) atau Binary (bagi dua)." },
-    p14: { t: "Pertemuan 14: Sorting", d: "Teknik merapikan data agar terurut dari kecil ke besar menggunakan algoritma Bubble atau Quick Sort." }
+    p1: { 
+        t: "Struktur Data Dasar", 
+        i: "fas fa-sitemap",
+        c: "Struktur data adalah cara mengatur dan menyimpan data di dalam komputer agar dapat digunakan secara efisien. Analisis algoritma diperlukan untuk mengukur kinerja program." 
+    },
+    p2: { 
+        t: "Array (Larik)", 
+        i: "fas fa-table-list",
+        c: "Array adalah struktur data linear yang menyimpan elemen dengan tipe data yang sama dalam urutan tertentu. Penggunaan indeks memudahkan akses data secara langsung." 
+    },
+    p3: { 
+        t: "Struct & ADT", 
+        i: "fas fa-box-archive",
+        c: "Struct memungkinkan kita membuat tipe data baru yang menggabungkan berbagai tipe variabel. ADT memisahkan logika data dari implementasi teknisnya." 
+    },
+    p4: { 
+        t: "Single Linked List", 
+        i: "fas fa-link",
+        c: "Sebuah urutan node di mana setiap node berisi data dan pointer yang menunjuk ke node berikutnya. Sangat efisien untuk manajemen memori dinamis." 
+    },
+    p5: { 
+        t: "Double Linked List", 
+        i: "fas fa-arrows-left-right",
+        c: "Sama seperti linked list, namun memiliki dua pointer (Next dan Previous). Hal ini memungkinkan navigasi data secara maju maupun mundur." 
+    },
+    p6: { 
+        t: "Stack (Tumpukan)", 
+        i: "fas fa-layer-group",
+        c: "Menggunakan prinsip LIFO (Last In First Out). Data yang terakhir masuk adalah yang pertama kali akan dikeluarkan dari tumpukan." 
+    },
+    p7: { 
+        t: "Queue (Antrian)", 
+        i: "fas fa-people-arrows",
+        c: "Menggunakan prinsip FIFO (First In First Out). Objek yang pertama masuk akan menjadi objek yang pertama kali diproses oleh sistem." 
+    },
+    p8: { 
+        t: "Evaluasi UTS", 
+        i: "fas fa-file-signature",
+        c: "Ujian Tengah Semester untuk menguji pemahaman mahasiswa tentang struktur data linear dan implementasi dasarnya dalam bahasa pemrograman." 
+    },
+    p9: { 
+        t: "Non-Linear: Tree", 
+        i: "fas fa-tree",
+        c: "Struktur data hierarkis yang terdiri dari node-node yang terhubung. Memiliki satu akar (root) dan node anak di bawahnya." 
+    },
+    p10: { 
+        t: "Binary Search Tree (BST)", 
+        i: "fas fa-diagram-project",
+        c: "Pohon biner khusus di mana nilai pada cabang kiri selalu lebih kecil dan cabang kanan selalu lebih besar dari nilai induknya." 
+    },
+    p11: { 
+        t: "Tree Traversal", 
+        i: "fas fa-route",
+        c: "Metode kunjungan node pada pohon untuk memproses data. Terdapat tiga teknik utama: Pre-order, In-order, dan Post-order." 
+    },
+    p12: { 
+        t: "Graph (Graf)", 
+        i: "fas fa-circle-nodes",
+        c: "Representasi hubungan antar objek (vertex) melalui jalur (edge). Digunakan untuk pemodelan jaringan sosial dan sistem navigasi." 
+    },
+    p13: { 
+        t: "Searching", 
+        i: "fas fa-search",
+        c: "Algoritma untuk menemukan lokasi data. Linear Search memindai satu per satu, sementara Binary Search mencari dengan membagi dua data terurut." 
+    },
+    p14: { 
+        t: "Sorting", 
+        i: "fas fa-sort-amount-up",
+        c: "Proses pengurutan data acak menjadi teratur. Contoh metodenya adalah Bubble Sort, Selection Sort, dan Quick Sort." 
+    }
 };
 
 function loadMateri(id) {
     const materi = materiDatabase[id];
-    const display = document.getElementById('content-display');
-    const title = document.getElementById('top-title');
-    const menuItems = document.querySelectorAll('.nav-item');
+    const contentArea = document.getElementById('content-area');
+    const menuItems = document.querySelectorAll('.menu li');
 
-    if(materi) {
-        title.innerText = materi.t;
-        display.innerHTML = `
-            <div class="card-materi">
-                <span style="color:var(--blue-primary); font-weight:700; font-size:0.8rem">MATERI KULIAH</span>
-                <h1 style="margin-top:10px">${materi.t}</h1>
-                <p>${materi.d}</p>
-                <div style="background:#f1f5f9; padding:20px; border-radius:15px">
-                    <h4 style="margin-bottom:10px">Apa yang dipelajari:</h4>
-                    <ul class="materi-list">
-                        <li>Implementasi logika dalam pemrograman</li>
-                        <li>Analisis efisiensi algoritma</li>
-                        <li>Studi kasus nyata di industri</li>
-                    </ul>
-                </div>
+    contentArea.innerHTML = `
+        <div class="card">
+            <h3>Pertemuan ${id.replace('p', '')}</h3>
+            <h1>${materi.t}</h1>
+            
+            <div class="visual-box">
+                <i class="${materi.i}" style="font-size: 80px; color: #2563eb; margin-bottom: 15px;"></i>
+                <p style="color: #64748b;">Visualisasi Konsep Materi</p>
             </div>
-        `;
 
-        // Atur menu aktif
-        menuItems.forEach(item => {
-            item.classList.remove('active');
-            if(item.getAttribute('onclick').includes(id)) item.classList.add('active');
-        });
+            <div class="explanation-text">
+                <p><b>Penjelasan Materi:</b></p>
+                <p>${materi.c}</p>
+                <br>
+                <p>Mahasiswa: <b>Kurrotun</b></p>
+            </div>
+        </div>
+    `;
 
-        // Scroll otomatis ke atas konten saat ganti materi
-        if(window.innerWidth > 768) {
-            document.querySelector('.scroll-area').scrollTop = 0;
-        } else {
-            window.scrollTo({ top: document.querySelector('.main-body').offsetTop - 20, behavior: 'smooth' });
-        }
-    }
+    menuItems.forEach(li => {
+        li.classList.remove('active');
+        if(li.getAttribute('onclick').includes(id)) li.classList.add('active');
+    });
+    
+    document.querySelector('.container').scrollTop = 0;
 }
 
-// Inisialisasi P1 saat loading
 window.onload = () => loadMateri('p1');

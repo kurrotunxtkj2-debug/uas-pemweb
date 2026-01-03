@@ -2,53 +2,51 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024"> 
     <title>UAS Struktur Data - Kurrotun</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="app-container">
+    <div class="wrapper">
         <nav class="sidebar">
             <div class="sidebar-header">
-                <div class="logo-box"><i class="fas fa-graduation-cap"></i></div>
-                <div class="header-text">
+                <div class="icon-box"><i class="fas fa-database"></i></div>
+                <div>
                     <h3>Kurrotun</h3>
-                    <span>Teknik Informatika</span>
+                    <p>Teknik Informatika</p>
                 </div>
             </div>
-
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item active" onclick="loadMateri('p1')"><i class="fas fa-bookmark"></i> <span>Pertemuan 1</span></li>
-                <li class="nav-item" onclick="loadMateri('p2')"><i class="fas fa-bookmark"></i> <span>Pertemuan 2</span></li>
-                <li class="nav-item" onclick="loadMateri('p3')"><i class="fas fa-bookmark"></i> <span>Pertemuan 3</span></li>
-                <li class="nav-item" onclick="loadMateri('p4')"><i class="fas fa-bookmark"></i> <span>Pertemuan 4</span></li>
-                <li class="nav-item" onclick="loadMateri('p5')"><i class="fas fa-bookmark"></i> <span>Pertemuan 5</span></li>
-                <li class="nav-item" onclick="loadMateri('p6')"><i class="fas fa-bookmark"></i> <span>Pertemuan 6</span></li>
-                <li class="nav-item" onclick="loadMateri('p7')"><i class="fas fa-bookmark"></i> <span>Pertemuan 7</span></li>
-                <li class="nav-item" onclick="loadMateri('p8')"><i class="fas fa-star"></i> <span>Pertemuan 8 (UTS)</span></li>
-                <li class="nav-item" onclick="loadMateri('p9')"><i class="fas fa-bookmark"></i> <span>Pertemuan 9</span></li>
-                <li class="nav-item" onclick="loadMateri('p10')"><i class="fas fa-bookmark"></i> <span>Pertemuan 10</span></li>
-                <li class="nav-item" onclick="loadMateri('p11')"><i class="fas fa-bookmark"></i> <span>Pertemuan 11</span></li>
-                <li class="nav-item" onclick="loadMateri('p12')"><i class="fas fa-bookmark"></i> <span>Pertemuan 12</span></li>
-                <li class="nav-item" onclick="loadMateri('p13')"><i class="fas fa-bookmark"></i> <span>Pertemuan 13</span></li>
-                <li class="nav-item" onclick="loadMateri('p14')"><i class="fas fa-bookmark"></i> <span>Pertemuan 14</span></li>
+            <ul class="menu" id="menu-list">
+                <li class="active" onclick="loadMateri('p1')"><i class="fas fa-code"></i> Pertemuan 1</li>
+                <li onclick="loadMateri('p2')"><i class="fas fa-code"></i> Pertemuan 2</li>
+                <li onclick="loadMateri('p3')"><i class="fas fa-code"></i> Pertemuan 3</li>
+                <li onclick="loadMateri('p4')"><i class="fas fa-code"></i> Pertemuan 4</li>
+                <li onclick="loadMateri('p5')"><i class="fas fa-code"></i> Pertemuan 5</li>
+                <li onclick="loadMateri('p6')"><i class="fas fa-code"></i> Pertemuan 6</li>
+                <li onclick="loadMateri('p7')"><i class="fas fa-code"></i> Pertemuan 7</li>
+                <li onclick="loadMateri('p8')"><i class="fas fa-award"></i> Pertemuan 8 (UTS)</li>
+                <li onclick="loadMateri('p9')"><i class="fas fa-code"></i> Pertemuan 9</li>
+                <li onclick="loadMateri('p10')"><i class="fas fa-code"></i> Pertemuan 10</li>
+                <li onclick="loadMateri('p11')"><i class="fas fa-code"></i> Pertemuan 11</li>
+                <li onclick="loadMateri('p12')"><i class="fas fa-code"></i> Pertemuan 12</li>
+                <li onclick="loadMateri('p13')"><i class="fas fa-code"></i> Pertemuan 13</li>
+                <li onclick="loadMateri('p14')"><i class="fas fa-code"></i> Pertemuan 14</li>
             </ul>
         </nav>
 
-        <main class="main-body">
-            <header class="top-nav">
-                <h2 id="top-title">Materi Perkuliahan</h2>
-                <div class="badge-uas">UAS Struktur Data</div>
-            </header>
-
-            <div class="scroll-area">
-                <div id="content-display">
+        <div class="main-content">
+            <div class="container">
+                <div id="content-area">
                     </div>
             </div>
-        </main>
+
+            <footer class="footer-custom">
+                <p>© 2026 Kurrotun-Teknik Informatika UAS - Struktur Data</p>
+            </footer>
+        </div>
     </div>
 
     <script src="script.js"></script>
