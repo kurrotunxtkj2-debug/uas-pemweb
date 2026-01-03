@@ -1,56 +1,58 @@
-const materiData = {
-    p1: { t: "Pertemuan 1: Pengenalan Struktur Data", c: "Struktur data adalah fondasi dalam pemrograman. Materi ini mencakup cara data disimpan di memori dan bagaimana mengukur efisiensi sebuah algoritma menggunakan Big O Notation." },
-    p2: { t: "Pertemuan 2: Array (Larik)", c: "Array menyimpan elemen bertipe sama secara berurutan. Di sini kita belajar tentang alokasi memori statis dan cara mengakses data menggunakan indeks." },
-    p3: { t: "Pertemuan 3: Struct & ADT", c: "Mempelajari pengelompokan variabel berbeda tipe (Struct) dan pembuatan tipe data abstrak (ADT) untuk menyederhanakan logika program." },
-    p4: { t: "Pertemuan 4: Single Linked List", c: "Konsep dasar rantai node dinamis. Mempelajari pointer, head, tail, dan bagaimana menyisipkan node baru di tengah list." },
-    p5: { t: "Pertemuan 5: Double Linked List", c: "Linked list dengan pointer ganda. Memungkinkan kita untuk berpindah antar data secara maju maupun mundur (Next & Previous)." },
-    p6: { t: "Pertemuan 6: Stack (Tumpukan)", c: "Implementasi prinsip LIFO (Last In First Out). Sangat penting untuk fungsi rekursif dan algoritma pengecekan tanda kurung." },
-    p7: { t: "Pertemuan 7: Queue (Antrian)", c: "Implementasi prinsip FIFO (First In First Out). Digunakan pada manajemen proses CPU dan antrian sistem printer." },
-    p8: { t: "Pertemuan 8: UTS", c: "Evaluasi penguasaan materi struktur data linear (Array, Linked List, Stack, dan Queue) secara teori dan praktik." },
-    p9: { t: "Pertemuan 9: Tree Dasar", c: "Struktur data non-linear hierarkis. Memahami konsep akar (root), anak (child), dan daun (leaf) pada sebuah pohon data." },
-    p10: { t: "Pertemuan 10: Binary Search Tree", c: "Pohon biner khusus yang mempercepat proses pencarian. Aturannya: anak kiri harus lebih kecil dan anak kanan lebih besar dari induk." },
-    p11: { t: "Pertemuan 11: Tree Traversal", c: "Cara mengunjungi semua node pada pohon data melalui teknik Pre-order, In-order, dan Post-order." },
-    p12: { t: "Pertemuan 12: Graph (Graf)", c: "Representasi hubungan antar objek yang kompleks. Digunakan dalam sistem GPS untuk mencari rute terpendek antar kota." },
-    p13: { t: "Pertemuan 13: Searching Algorithm", c: "Mempelajari algoritma pencarian Linear Search untuk data acak dan Binary Search untuk pencarian super cepat pada data terurut." },
-    p14: { t: "Pertemuan 14: Sorting Algorithm", c: "Mempelajari berbagai cara mengurutkan data secara sistematis, mulai dari Bubble Sort hingga Quick Sort yang lebih efisien." }
+const materiDatabase = {
+    p1: { t: "Pertemuan 1: Pengenalan Struktur Data", d: "Halo, saya Kurrotun. Di pertemuan awal ini kita mempelajari dasar organisasi data agar aplikasi lebih ringan dan cepat." },
+    p2: { t: "Pertemuan 2: Array (Larik)", d: "Mempelajari cara menyimpan data dalam deretan memori yang berurutan. Sangat efektif untuk data dengan jumlah tetap." },
+    p3: { t: "Pertemuan 3: Struct & ADT", d: "Membahas pembuatan tipe data kustom untuk menampung berbagai macam informasi dalam satu paket variabel." },
+    p4: { t: "Pertemuan 4: Single Linked List", d: "Memasuki konsep data dinamis di mana setiap data menyimpan alamat data berikutnya menggunakan pointer." },
+    p5: { t: "Pertemuan 5: Double Linked List", d: "Versi Linked List yang lebih canggih karena bisa melompat maju maupun mundur antar node." },
+    p6: { t: "Pertemuan 6: Stack (Tumpukan)", d: "Prinsip LIFO (Last In First Out). Terakhir masuk, pertama keluar. Digunakan pada fitur 'Kembali' di browser." },
+    p7: { t: "Pertemuan 7: Queue (Antrian)", d: "Prinsip FIFO (First In First Out). Pertama datang, pertama dilayani. Sangat berguna untuk sistem antrian bank." },
+    p8: { t: "Pertemuan 8: UTS", d: "Evaluasi tengah semester untuk mengukur sejauh mana pemahaman Kurrotun mengenai materi linear." },
+    p9: { t: "Pertemuan 9: Tree (Pohon)", d: "Struktur data hierarkis. Di sini kita belajar tentang akar, cabang, dan daun dalam sebuah data." },
+    p10: { t: "Pertemuan 10: Binary Search Tree", d: "Strategi pohon biner terurut untuk mempercepat proses pencarian data hingga ribuan kali lipat." },
+    p11: { t: "Pertemuan 11: Tree Traversal", d: "Cara menelusuri isi pohon data melalui jalur Pre-order, In-order, dan Post-order." },
+    p12: { t: "Pertemuan 12: Graph (Graf)", d: "Model jaringan yang menghubungkan titik-titik lokasi, seperti jalur peta atau jaringan pertemanan." },
+    p13: { t: "Pertemuan 13: Searching", d: "Teknik mencari data dengan cara Linear (urut) atau Binary (bagi dua)." },
+    p14: { t: "Pertemuan 14: Sorting", d: "Teknik merapikan data agar terurut dari kecil ke besar menggunakan algoritma Bubble atau Quick Sort." }
 };
 
-function loadContent(id) {
-    const data = materiData[id];
-    const display = document.getElementById('display-area');
-    const titleHeader = document.getElementById('current-title');
-    const menuItems = document.querySelectorAll('#menu-list li');
+function loadMateri(id) {
+    const materi = materiDatabase[id];
+    const display = document.getElementById('content-display');
+    const title = document.getElementById('top-title');
+    const menuItems = document.querySelectorAll('.nav-item');
 
-    if(data) {
-        titleHeader.innerText = data.t;
+    if(materi) {
+        title.innerText = materi.t;
         display.innerHTML = `
-            <div class="card">
-                <small style="color:var(--accent-color); font-weight:600; text-transform:uppercase">Pertemuan ${id.replace('p','')}</small>
-                <h1 style="margin-top:10px">${data.t}</h1>
-                <div class="info-banner">
-                    <b>Nama Mahasiswa:</b> Kurrotun <br>
-                    <b>Mata Kuliah:</b> Struktur Data
+            <div class="card-materi">
+                <span style="color:var(--blue-primary); font-weight:700; font-size:0.8rem">MATERI KULIAH</span>
+                <h1 style="margin-top:10px">${materi.t}</h1>
+                <p>${materi.d}</p>
+                <div style="background:#f1f5f9; padding:20px; border-radius:15px">
+                    <h4 style="margin-bottom:10px">Apa yang dipelajari:</h4>
+                    <ul class="materi-list">
+                        <li>Implementasi logika dalam pemrograman</li>
+                        <li>Analisis efisiensi algoritma</li>
+                        <li>Studi kasus nyata di industri</li>
+                    </ul>
                 </div>
-                <p>${data.c}</p>
-                <h3 style="margin-top:25px; margin-bottom:15px">Pokok Bahasan:</h3>
-                <ul style="margin-left: 20px; color:#475569; line-height: 2">
-                    <li>Konsep Dasar dan Teori ${data.t}</li>
-                    <li>Operasi Utama pada Data</li>
-                    <li>Implementasi dan Contoh Kasus Nyata</li>
-                </ul>
             </div>
         `;
 
-        // Tandai menu yang aktif
-        menuItems.forEach(li => {
-            li.classList.remove('active');
-            if(li.getAttribute('onclick').includes(id)) li.classList.add('active');
+        // Atur menu aktif
+        menuItems.forEach(item => {
+            item.classList.remove('active');
+            if(item.getAttribute('onclick').includes(id)) item.classList.add('active');
         });
-        
-        // Scroll ke atas saat ganti materi
-        document.querySelector('.content-scroll').scrollTop = 0;
+
+        // Scroll otomatis ke atas konten saat ganti materi
+        if(window.innerWidth > 768) {
+            document.querySelector('.scroll-area').scrollTop = 0;
+        } else {
+            window.scrollTo({ top: document.querySelector('.main-body').offsetTop - 20, behavior: 'smooth' });
+        }
     }
 }
 
-// Jalankan materi pertama kali
-window.onload = () => loadContent('p1');
+// Inisialisasi P1 saat loading
+window.onload = () => loadMateri('p1');

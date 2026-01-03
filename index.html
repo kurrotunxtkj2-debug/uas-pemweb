@@ -10,42 +10,42 @@
 </head>
 <body>
 
-    <div class="wrapper">
+    <div class="app-container">
         <nav class="sidebar">
-            <div class="sidebar-brand">
-                <div class="brand-logo"><i class="fas fa-user-graduate"></i></div>
-                <div class="brand-text">
+            <div class="sidebar-header">
+                <div class="logo-box"><i class="fas fa-graduation-cap"></i></div>
+                <div class="header-text">
                     <h3>Kurrotun</h3>
                     <span>Teknik Informatika</span>
                 </div>
             </div>
 
-            <ul class="menu-list" id="menu-list">
-                <li class="active" onclick="loadContent('p1')"><i class="fas fa-home"></i> <span>Pertemuan 1</span></li>
-                <li onclick="loadContent('p2')"><i class="fas fa-table"></i> <span>Pertemuan 2</span></li>
-                <li onclick="loadContent('p3')"><i class="fas fa-cube"></i> <span>Pertemuan 3</span></li>
-                <li onclick="loadContent('p4')"><i class="fas fa-link"></i> <span>Pertemuan 4</span></li>
-                <li onclick="loadContent('p5')"><i class="fas fa-code-branch"></i> <span>Pertemuan 5</span></li>
-                <li onclick="loadContent('p6')"><i class="fas fa-layer-group"></i> <span>Pertemuan 6</span></li>
-                <li onclick="loadContent('p7')"><i class="fas fa-list-ol"></i> <span>Pertemuan 7</span></li>
-                <li onclick="loadContent('p8')"><i class="fas fa-graduation-cap"></i> <span>Pertemuan 8 (UTS)</span></li>
-                <li onclick="loadContent('p9')"><i class="fas fa-tree"></i> <span>Pertemuan 9</span></li>
-                <li onclick="loadContent('p10')"><i class="fas fa-diagram-project"></i> <span>Pertemuan 10</span></li>
-                <li onclick="loadContent('p11')"><i class="fas fa-sitemap"></i> <span>Pertemuan 11</span></li>
-                <li onclick="loadContent('p12')"><i class="fas fa-network-wired"></i> <span>Pertemuan 12</span></li>
-                <li onclick="loadContent('p13')"><i class="fas fa-search"></i> <span>Pertemuan 13</span></li>
-                <li onclick="loadContent('p14')"><i class="fas fa-sort-amount-up"></i> <span>Pertemuan 14</span></li>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item active" onclick="loadMateri('p1')"><i class="fas fa-bookmark"></i> <span>Pertemuan 1</span></li>
+                <li class="nav-item" onclick="loadMateri('p2')"><i class="fas fa-bookmark"></i> <span>Pertemuan 2</span></li>
+                <li class="nav-item" onclick="loadMateri('p3')"><i class="fas fa-bookmark"></i> <span>Pertemuan 3</span></li>
+                <li class="nav-item" onclick="loadMateri('p4')"><i class="fas fa-bookmark"></i> <span>Pertemuan 4</span></li>
+                <li class="nav-item" onclick="loadMateri('p5')"><i class="fas fa-bookmark"></i> <span>Pertemuan 5</span></li>
+                <li class="nav-item" onclick="loadMateri('p6')"><i class="fas fa-bookmark"></i> <span>Pertemuan 6</span></li>
+                <li class="nav-item" onclick="loadMateri('p7')"><i class="fas fa-bookmark"></i> <span>Pertemuan 7</span></li>
+                <li class="nav-item" onclick="loadMateri('p8')"><i class="fas fa-star"></i> <span>Pertemuan 8 (UTS)</span></li>
+                <li class="nav-item" onclick="loadMateri('p9')"><i class="fas fa-bookmark"></i> <span>Pertemuan 9</span></li>
+                <li class="nav-item" onclick="loadMateri('p10')"><i class="fas fa-bookmark"></i> <span>Pertemuan 10</span></li>
+                <li class="nav-item" onclick="loadMateri('p11')"><i class="fas fa-bookmark"></i> <span>Pertemuan 11</span></li>
+                <li class="nav-item" onclick="loadMateri('p12')"><i class="fas fa-bookmark"></i> <span>Pertemuan 12</span></li>
+                <li class="nav-item" onclick="loadMateri('p13')"><i class="fas fa-bookmark"></i> <span>Pertemuan 13</span></li>
+                <li class="nav-item" onclick="loadMateri('p14')"><i class="fas fa-bookmark"></i> <span>Pertemuan 14</span></li>
             </ul>
         </nav>
 
-        <main class="main-content">
-            <header class="topbar">
-                <h2 id="current-title">Materi Perkuliahan</h2>
-                <div class="date-info">UAS - Struktur Data 2026</div>
+        <main class="main-body">
+            <header class="top-nav">
+                <h2 id="top-title">Materi Perkuliahan</h2>
+                <div class="badge-uas">UAS Struktur Data</div>
             </header>
 
-            <div class="content-scroll">
-                <div id="display-area">
+            <div class="scroll-area">
+                <div id="content-display">
                     </div>
             </div>
         </main>
